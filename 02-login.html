@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大事件-登录页面</title>
+    <!-- 引入 layui.文件 -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- 引入本地login.css文件 -->
+    <link rel="stylesheet" href="/assets/css/02-login.css">
+</head>
+
+<body>
+    <!-- 顶部 logo -->
+    <div class="layui-main header">
+        <img src="/assets/images/logo.png" alt="">
+    </div>
+    <!--注册， 登录模块 -->
+    <div class="login">
+        <!-- 标题 titel -->
+        <div class="title"></div>
+        <!-- 用户输入框 -->
+        <form class="login-form layui-form">
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-username"></i>
+                <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                    autocomplete="off" class="layui-input">
+            </div>
+            <!-- 密码 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-password"></i>
+                <input type="password" name="password" placeholder="请输入密码" lay-verify="required|pwdLength"
+                    class="layui-input" autocomplete="off">
+            </div>
+            <!-- 登录按钮 -->
+        </form>
+
+
+    </div>
+</body>
+
+</html>
