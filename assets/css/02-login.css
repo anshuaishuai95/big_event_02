@@ -1,5 +1,6 @@
 body,
 html {
+    height: 100%;
     margin: 0;
     padding: 0;
     background: url('/assets/images/login_bg.jpg') no-repeat;
@@ -27,12 +28,14 @@ html {
     background: url('/assets/images/login_title.png') no-repeat center;
 }
 
-.login-form {
+.layui-form {
     padding: 0 30px;
 }
 
-.layui-input {
-    padding-left: 32px;
+.links {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
 }
 
 .layui-form-item {
@@ -43,4 +46,8 @@ html {
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+.layui-input {
+    padding-left: 35px;
 }
