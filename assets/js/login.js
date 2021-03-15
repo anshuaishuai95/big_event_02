@@ -36,17 +36,17 @@ $(function () {
         e.preventDefault();
         //发送ajax
         $.ajax({
-            url: '/api/reguser',
             type: 'post',
+            url: '/api/reguser',
             data: {
                 username: $('.reg-box input[name=username]').val(),
                 password: $('.reg-box input[name=password]').val()
             },
             success: (res) => {
-                // console.log(123, res);
+                console.log(123, res);
                 //返回状态判断
-                if (status != 0) {
-                    return layer.msg(res.message, { iocn: 5 })
+                if (res.status != 0) {
+                    return layer.msg(res.message, { icon: 5 })
                 }
                 //提示成功
                 layer.msg(res.message, { icon: 6 });
@@ -65,14 +65,14 @@ $(function () {
         e.preventDefault();
         // 发送ajax
         $.ajax({
-            url: '/api/login',
             type: 'post',
+            url: '/api/login',
             data: $(this).serialize(),
             success: (res) => {
                 console.log(res);
                 //判断是否登录成功
                 if (res.status != 0) {
-                    return layer.mag(res.message, { icon: 5 })
+                    return layer.msg(res.message, { icon: 5 })
                 }
                 //登录成功 跳转页面
                 location.href = '/02-index.html';
