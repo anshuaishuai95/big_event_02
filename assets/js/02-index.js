@@ -53,7 +53,7 @@ function renderAvatar(user) {
         $('.text-avatar').show().html(name[0].toUpperCase())
     } else {
         //渲染头像。隐藏文字
-        $('.layui-nav-img').shou().attr('src', user.user_pic);
+        $('.layui-nav-img').show().attr('src', user.user_pic);
         $('.text-avatar').hide()
     }
 
